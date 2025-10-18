@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Remover</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+    input[type=file], button {
+      margin: 10px;
+    }
+    input {
+      width: 100px;
+      height: 100px;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h2>🪄 Background Remover</h2>
+  <form action="/hapus" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required>
+    <button type="submit">Hapus Background</button>
+  </form>
 
+  {% if hasil %}
+  <h3>Hasil:</h3>
+  <img src="{{ hasil }}" alt="Hasil">
+  {% endif %}
+</body>
+    </html>
