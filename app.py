@@ -4,7 +4,7 @@ from PIL import Image
 import os
 
 app = Flask(__name__)
-UPLOAD_FOLDER = "static/hasil"
+UPLOAD_FOLDER = "hasil"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route('/')
